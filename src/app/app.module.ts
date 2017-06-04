@@ -14,6 +14,7 @@ import { ShopItemComponent } from './shop/shop-list/shop-item/shop-item.componen
 import { BasketComponent } from './basket/basket.component';
 import { BasketListComponent } from './basket/basket-list/basket-list.component';
 import { BasketEditComponent } from './basket/basket-list/basket-edit/basket-edit.component';
+import { PriceListComponent } from './prices/price-list/price-list.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { BasketEditComponent } from './basket/basket-list/basket-edit/basket-edi
     ShopItemComponent,
     BasketComponent,
     BasketListComponent,
-    BasketEditComponent
+    BasketEditComponent,
+    PriceListComponent
   ],
   imports: [
     BrowserModule,

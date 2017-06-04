@@ -1,1 +1,25 @@
-<app-shop-item></app-shop-item>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="form-group">
+      <div class="btn btn-success">New shop item(material)</div>
+    </div>
+  </div>
+</div>
+<hr/>
+<div class="row">
+  <div class="col-xs-12">
+    <a href="#" class="list-group-item clearfix" *ngFor="let material of materialList">
+      <div class="pull-left">
+        <h4 class="list-group-item-heading">{{ material.title }}</h4>
+        <p class="list-group-item-text">{{ material.description }}</p>
+      </div>
+      <span class="pull-right">
+        <img
+          [src]="material.imagePath"
+          alt="{{ material.title }}"
+          class="img-responsive" style="max-height: 50px">
+      </span>
+    </a>
+    <app-shop-item></app-shop-item>
+  </div>
+</div>
