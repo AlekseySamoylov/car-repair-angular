@@ -1,3 +1,14 @@
-<p>
-  price-list works!
-</p>
+<div class="container">
+  <app-price-manager
+    (serverCreated)="onPriceAdded($event)"
+    (blueprintCreated)="onSuperPriceAdded($event)"
+  ></app-price-manager>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-price-item
+        *ngFor="let priceItem of serverElements"
+      [priceItem]="priceItem"></app-price-item>
+    </div>
+  </div>
+</div>
