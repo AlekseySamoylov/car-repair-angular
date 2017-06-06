@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {Price} from '../../../../shared/price.model';
+import { PriceType } from '../../../../shared/price-type.enum';
 
 @Component({
   selector: 'app-price-item',
@@ -7,11 +9,17 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PriceItemComponent implements OnInit {
 
-  @Input('priceItem') element: {type: string, name: string, content: string};
+  @Input('priceItem') priceItem: Price;
 
   constructor() { }
 
   ngOnInit() {
+  }
+  isSuper(): boolean {
+    return this.priceItem.type === PriceType.SUPER;
+  }
+  isNormal(): boolean {
+    return this.priceItem.type === PriceType.NORMAL;
   }
 
 }

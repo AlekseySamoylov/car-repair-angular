@@ -1,13 +1,13 @@
 <div class="container">
   <app-price-manager
-    (serverCreated)="onPriceAdded($event)"
-    (blueprintCreated)="onSuperPriceAdded($event)"
+    (priceCreated)="onPriceAdded($event)"
+    (superPriceCreated)="onSuperPriceAdded($event)"
   ></app-price-manager>
   <hr>
   <div class="row">
     <div class="col-xs-12">
       <app-price-item
-        *ngFor="let priceItem of serverElements"
+        *ngFor="let priceItem of prices"
       [priceItem]="priceItem"></app-price-item>
     </div>
   </div>

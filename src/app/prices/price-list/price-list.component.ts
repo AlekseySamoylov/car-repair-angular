@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Price } from '../price.model';
+import { Price } from '../../../shared/price.model';
 
 @Component({
   selector: 'app-price-list',
@@ -9,27 +9,17 @@ import { Price } from '../price.model';
 export class PriceListComponent implements OnInit {
 
   prices: Price[] = [
-    new Price(1, 'Engine repair', 'good work', 20000),
-    new Price(1, 'Engine repair', 'good work', 20000)
+    new Price('Engine repair', 'good work', 20000),
+    new Price('Gear box repair', 'good work', 30000)
   ];
-
-  serverElements = [{name: 'test', type: 'server', content: 'test content'}];
 
   ngOnInit(): void {
   }
-  onPriceAdded(serverData: {serverName: string, serverContent: string}) {
-    this.serverElements.push({
-      type: 'server',
-      name: serverData.serverName,
-      content: serverData.serverContent
-    });
+  onPriceAdded(newPrice: Price) {
+    this.prices.push(newPrice);
   }
 
-  onSuperPriceAdded(blueprintData: {serverName: string, serverContent: string}) {
-    this.serverElements.push({
-      type: 'blueprint',
-      name: blueprintData.serverName,
-      content: blueprintData.serverContent
-    });
+  onSuperPriceAdded(newSuperPrice: Price) {
+    this.prices.push(newSuperPrice);
   }
 }
