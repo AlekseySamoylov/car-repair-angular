@@ -23,3 +23,5 @@ export class PriceListComponent implements OnInit {
     this.prices.push(newSuperPrice);
   }
 }
+
+

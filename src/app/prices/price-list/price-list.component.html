@@ -8,7 +8,9 @@
     <div class="col-xs-12">
       <app-price-item
         *ngFor="let priceItem of prices"
-      [priceItem]="priceItem"></app-price-item>
+      [priceItem]="priceItem">
+        <p #contentParagraph>Content</p>
+      </app-price-item>
     </div>
   </div>
 </div>
