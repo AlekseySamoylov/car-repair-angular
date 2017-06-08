@@ -1,17 +1,18 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
+import {HeaderTab} from '../shared/header-tab.enum';
 
 const MAGIC_NUMBER = 768;
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['header.component.css']
 })
 export class HeaderComponent {
-  navbarOpened = false;
-  // TODO (Aleksey Samoylov) Fix this bad code from last project.
   tabNumber = 1;
+  @Output() menuTabSelected = new EventEmitter<HeaderTab>();
+
   headerSelect(tabNumber: number) {
-    console.log('Hello navbar tab number ' + tabNumber + ' clicked');
     this.tabNumber = tabNumber;
     if (screen.width < MAGIC_NUMBER) {
       document.getElementById('nav-bar-button').click();
@@ -20,8 +21,24 @@ export class HeaderComponent {
   isHeaderTabSelected(tabNumber: number) {
     return this.tabNumber === tabNumber;
   }
-  navbarButtonClick() {
-    this.navbarOpened = !this.navbarOpened;
-    console.log('Hello navbar button clicked!');
+
+  openMainMenu() {
+    this.menuTabSelected.emit(HeaderTab.MAIN);
   }
+  openPriceMenu() {
+    this.menuTabSelected.emit(HeaderTab.PRICES);
+  }
+  openCarRepairMenu() {
+    this.menuTabSelected.emit(HeaderTab.CAR_REPAIR);
+  }
+  openShopMenu() {
+    this.menuTabSelected.emit(HeaderTab.SHOP);
+  }
+  openContactsMenu() {
+    this.menuTabSelected.emit(HeaderTab.CONTACTS);
+  }
+  openBasketMenu() {
+    this.menuTabSelected.emit(HeaderTab.BASKET);
+  }
+
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Material } from '../../../shared/material.model';
+import { Material } from '../../shared/material.model';
 
 @Component({
   selector: 'app-shop-list',

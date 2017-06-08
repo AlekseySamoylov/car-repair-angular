@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Price } from '../../../shared/price.model';
+import { Price } from '../../shared/price.model';
 
 @Component({
   selector: 'app-price-list',

@@ -1,6 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import { Price } from '../../../../shared/price.model';
-import {PriceType} from '../../../../shared/price-type.enum';
+import { Price } from '../../../shared/price.model';
+import {PriceType} from '../../../shared/price-type.enum';
 
 @Component({
   selector: 'app-price-manager',

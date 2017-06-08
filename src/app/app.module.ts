@@ -17,6 +17,8 @@ import { BasketEditComponent } from './basket/basket-list/basket-edit/basket-edi
 import { PriceListComponent } from './prices/price-list/price-list.component';
 import { PriceItemComponent } from './prices/price-list/price-item/price-item.component';
 import { PriceManagerComponent } from './prices/price-list/price-manager/price-manager.component';
+import { AboutComponent } from './about/about.component';
+import { CarRepairComponent } from './car-repair/car-repair.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { PriceManagerComponent } from './prices/price-list/price-manager/price-m
     BasketEditComponent,
     PriceListComponent,
     PriceItemComponent,
-    PriceManagerComponent
+    PriceManagerComponent,
+    AboutComponent,
+    CarRepairComponent
   ],
   imports: [
     BrowserModule,

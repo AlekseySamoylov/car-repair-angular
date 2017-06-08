@@ -1,12 +1,13 @@
-<app-header></app-header>
+<app-header
+(menuTabSelected)="onHeaderTabChanged($event)">
+</app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-shop></app-shop>
-      <app-basket></app-basket>
+      <app-about *ngIf="headerTab === HeaderTab.MAIN"></app-about>
+      <app-prices *ngIf="headerTab === HeaderTab.PRICES" ></app-prices>
+      <app-shop *ngIf="headerTab === HeaderTab.SHOP" ></app-shop>
+      <app-basket *ngIf="headerTab === HeaderTab.BASKET" ></app-basket>
     </div>
   </div>
 </div>
-
-
-<app-prices></app-prices>

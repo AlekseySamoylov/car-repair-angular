@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ShopingBasketItem } from '../../../shared/shoping-basket-item.model';
-import { Material } from '../../../shared/material.model';
+import { ShopingBasketItem } from '../../shared/shoping-basket-item.model';
+import { Material } from '../../shared/material.model';
 
 @Component({
   selector: 'app-basket-list',
