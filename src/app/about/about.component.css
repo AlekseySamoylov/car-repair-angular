@@ -2,13 +2,6 @@ p img {
   border-radius: 5px;
 }
 
-body{
-  background: #adb0b2;
-  background: -webkit-linear-gradient(#EFEFEF, #CACACC);
-  background: -o-linear-gradient(#EFEFEF, #CACACC);
-  background: -moz-linear-gradient(#EFEFEF, #CACACC);
-  background: linear-gradient(#EFEFEF, #CACACC);
-}
 .body-text img{
   margin-left: 10px;
   margin-right: 10px;
@@ -68,4 +61,30 @@ h5 {
 p, ul, ol, pre, table, blockquote {
   margin-top: 0px;
   margin-bottom: 28px;
+}
+
+
+@media (max-width: 415px) {
+
+  table.table-striped{
+    font-size: 14px;
+  }
+  .table-striped > tbody > tr> td, .table-striped > tbody  tr  th {
+    background-color: #ffffff;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .body-text {
+    display: block;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 19px;
+    line-height: 28px;
+    max-width: 760px;
+    padding: 0px 0px;
+    margin: 0 auto;
+  }
+
+
 }
