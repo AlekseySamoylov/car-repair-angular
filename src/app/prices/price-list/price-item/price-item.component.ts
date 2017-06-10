@@ -12,8 +12,7 @@ import {
   AfterViewChecked,
   OnDestroy,
   ElementRef,
-  // ViewChild,
-  ContentChild
+  ViewChild
 } from '@angular/core';
 import { Price } from '../../../shared/price.model';
 import { PriceType } from '../../../shared/price-type.enum';
@@ -29,8 +28,7 @@ export class PriceItemComponent implements OnInit,
   AfterViewInit, AfterViewChecked, OnDestroy {
 
   @Input('priceItem') priceItem: Price;
-  // @ViewChild('heading') header: ElementRef;
-  @ContentChild('contentParagraph') paragraph: ElementRef;
+  // @ViewChild('contentParagraph') paragraphRef: ElementRef;
   constructor() {
     console.log('constructor log');
   }
@@ -40,7 +38,7 @@ export class PriceItemComponent implements OnInit,
     console.log(changes);
   }
   ngOnInit() {
-    console.log('onInit log ' + this.paragraph.nativeElement.textContent);
+    // console.log('onInit log ' + this.paragraphRef.nativeElement.textContent);
   }
   ngDoCheck() {
     console.log('doCheck log');

@@ -1,0 +1,88 @@
+p img {
+  border-radius: 5px;
+}
+
+.body-text img{
+  margin: 5px 10px;
+  border: 1px solid #b7b7b7;
+  padding: 3px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.body-text {
+  display: block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 19px;
+  line-height: 28px;
+  max-width: 760px;
+  padding: 28px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: inherit;
+  font-weight: 600;
+  font-style: inherit;
+  font-size: 28px;
+  line-height: 28px;
+  margin-top: 28px;
+  margin-bottom: 28px;
+}
+h3 {
+  font-family: inherit;
+  font-weight: 600;
+  font-style: inherit;
+  font-size: 23px;
+  line-height: 28px;
+  margin-top: 28px;
+  margin-bottom: 0;
+}
+h4 {
+  font-family: inherit;
+  font-weight: 600;
+  font-style: inherit;
+  font-size: 19px;
+  line-height: 28px;
+  margin-top: 28px;
+  margin-bottom: 0;
+}
+h5 {
+  font-family: inherit;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 19px;
+  line-height: 28px;
+  margin-top: 28px;
+  margin-bottom: 0;
+}
+p, ul, ol, pre, table, blockquote {
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+
+
+@media (max-width: 415px) {
+
+  table.table-striped{
+    font-size: 14px;
+  }
+  .table-striped > tbody > tr> td, .table-striped > tbody  tr  th {
+    background-color: #ffffff;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .body-text {
+    display: block;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 19px;
+    line-height: 28px;
+    max-width: 760px;
+    padding: 0 0;
+    margin: 0 auto;
+  }
+
+
+}

@@ -1,12 +1,14 @@
 <div class="ro">
   <div class="col-xs-10">
-    <app-basket-edit></app-basket-edit>
+    <app-basket-edit
+      (shoppingItemToSave)="addShoppingItemToSave($event)">
+    </app-basket-edit>
     <hr/>
     <ul class="list-group">
       <a
         class="list-group-item"
         style="cursor: pointer"
-        *ngFor="let item of shopingBasketItems">
+        *ngFor="let item of shoppingBasketItems">
         {{ item.material.title }} {{ item.amount }}
       </a>
     </ul>

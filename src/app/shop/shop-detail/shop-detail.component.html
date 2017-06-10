@@ -1,33 +1,36 @@
 <div class="row">
   <div class="col-xs-12">
-    <img src="" alt="" class="img-responsive">
+    <img
+      [src]="selectedMaterial.imagePath"
+      alt="{{selectedMaterial.title}}"
+      class="img-responsive"
+      style="max-height: 300px">
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <h1>Price Name</h1>
+    <h1>{{ selectedMaterial.title }}</h1>
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <div class="btn-group">
+    <div class="dropdown">
       <button
         type="button"
-        class="btn btn-primary dropdown-toggle">
+        class="btn btn-primary dropdown">
         Manage shop item <span class="caret"></span>
       </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-        <a class="dropdown-item" href="#">Add item to Basket</a>
-        <a class="dropdown-item" href="#">Add item to Favorites</a>
-        <a class="dropdown-item" href="#">Write comment</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Edit Item</a>
+      <div class="dropdown-content" aria-labelledby="dropdownMenu">
+        <a href="#">Add item to Basket</a>
+        <a href="#">Add item to Favorites</a>
+        <a href="#">Write comment</a>
+        <a href="#">Edit Item</a>
       </div>
     </div>
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
-    Description
+   <p>{{ selectedMaterial.description }}</p>
   </div>
 </div>

@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Material} from '../../../shared/material.model';
 
 @Component({
@@ -8,10 +8,14 @@ import {Material} from '../../../shared/material.model';
 })
 export class ShopItemComponent implements OnInit {
 
-  @Input('shopItem') material: Material;
+  @Input() material: Material;
+  @Output() materialSelected = new EventEmitter<Material>();
   constructor() { }
 
   ngOnInit() {
+  }
+  onSelectItem(material: Material) {
+    this.materialSelected.emit(material);
   }
 
 }

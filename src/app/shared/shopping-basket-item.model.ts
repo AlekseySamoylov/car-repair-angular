@@ -1,4 +1,4 @@
 import { Material } from './material.model';
-export class ShopingBasketItem {
+export class ShoppingBasketItem {
   constructor(public material: Material, public amount) {}
 }

@@ -10,7 +10,8 @@
   <div class="col-xs-12">
     <app-shop-item
       *ngFor="let materialElement of materialList"
-      [shopItem]="materialElement">
+      [material]="materialElement"
+      (materialSelected)="throwUpMaterialSelected($event)">
     </app-shop-item>
   </div>
 </div>

@@ -51,11 +51,16 @@ body{
 }
 
 .nav-pills > li > a:hover {
-  background: #CECECF;
+  background: whitesmoke;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-.nav-pills > li > a.active {
-  background-color: yellow;
+.nav-pills > li {
+  margin: 3px 5px 3px 5px;
+  background-color: lightgray;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
 }
 
 .nav {
@@ -195,17 +200,18 @@ body{
 }
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
   color: #000000;
-  background: #CECECF;
+  background: whitesmoke;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 5px;
 
 }
 
 
 .navbar-inverse {
-  border-color: #DBDBDB;
-  background: -webkit-linear-gradient(#EFEFEF, #CACACC);
-  background: -o-linear-gradient(#EFEFEF, #CACACC);
-  background: -moz-linear-gradient(#EFEFEF, #CACACC);
-  background: linear-gradient(#EFEFEF, #CACACC);
+  border-color: lightgray;
+  background: #EFEFEF;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
 }
 
 .nav-pills > li > a {
@@ -235,18 +241,11 @@ p img{
 .panel-warning>.panel-heading {
   color: #000;
   background: #FFFFFF;
-  background: -webkit-linear-gradient(#ffffff, #f0f0f0);
-  background: -o-linear-gradient(#ffffff, #f0f0f0);
-  background: -moz-linear-gradient(#ffffff, #f0f0f0);
-  background: linear-gradient(#ffffff, #f0f0f0);
   border-color: #CACACA;
 }
-.panel-body{
-  background: #FFFFFF;
-  background: -webkit-linear-gradient(#EFEFEF, #FFFFFF);
-  background: -o-linear-gradient(#EFEFEF, #FFFFFF);
-  background: -moz-linear-gradient(#EFEFEF, #FFFFFF);
-  background: linear-gradient(#EFEFEF, #FFFFFF);}
+.panel-body {
+  background: white;
+}
 .input-lg{
   font-size:14px;
 }
@@ -258,7 +257,7 @@ p img{
 }
 
 .table-head{
-  background-color: whitesmoke;
+  background-color: white;
 }
 
 .table-striped > tbody > tr> td, .table-striped > tbody > tr> th {
@@ -279,5 +278,26 @@ p img{
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
   border-color: #b1b1b1;
+}
+
+@media (max-width: 580px) {
+  .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    margin: 5px 0 10px;
+  }
+
+}
+@media (max-width: 415px) {
+  .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #000000;
+    background: whitesmoke;
+    box-shadow: 0;
+    border-radius: 5px;
+  }
+
+}
+
+.navbar-toggle {
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  background-color: #333;
 }
 

@@ -1,8 +1,16 @@
 <div class="row">
   <div class="col-md-5">
-    <app-shop-list></app-shop-list>
+    <app-shop-list
+    (materialWasSelected)="selectMaterial($event)">
+    </app-shop-list>
   </div>
   <div class="col-md-7">
-    <app-shop-detail></app-shop-detail>
+    <app-shop-detail
+      *ngIf="selectedMaterial; else infoText"
+      [selectedMaterial]="selectedMaterial">
+    </app-shop-detail>
+    <ng-template #infoText>
+      <p>Please select a Price item.</p>
+    </ng-template>
   </div>
 </div>

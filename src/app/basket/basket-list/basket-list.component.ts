@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ShopingBasketItem } from '../../shared/shoping-basket-item.model';
+import { ShoppingBasketItem } from '../../shared/shopping-basket-item.model';
 import { Material } from '../../shared/material.model';
 
 @Component({
@@ -8,12 +8,12 @@ import { Material } from '../../shared/material.model';
   styleUrls: ['./basket-list.component.css']
 })
 export class BasketListComponent implements OnInit {
-  shopingBasketItems: ShopingBasketItem[] = [
-    new ShopingBasketItem(
+  shoppingBasketItems: ShoppingBasketItem[] = [
+    new ShoppingBasketItem(
       new Material('Brake pads', 'Good part for Toyota', 'http://www.alekseysamoylov.com/serviceiii/files/staticImages/3'),
       2
     ),
-    new ShopingBasketItem(
+    new ShoppingBasketItem(
       new Material('GRM belt', 'Good part for Toyota', 'http://www.alekseysamoylov.com/serviceiii/files/staticImages/1'),
       3
     )
@@ -21,6 +21,9 @@ export class BasketListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+  addShoppingItemToSave(shoppingItemToSave: ShoppingBasketItem) {
+    this.shoppingBasketItems.push(shoppingItemToSave);
   }
 
 }

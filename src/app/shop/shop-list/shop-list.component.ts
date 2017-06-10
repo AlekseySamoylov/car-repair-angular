@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { Material } from '../../shared/material.model';
 
 @Component({
@@ -17,9 +17,13 @@ export class ShopListComponent implements OnInit {
     new Material('Water pump', 'Good part for Toyota', 'http://www.alekseysamoylov.com/serviceiii/files/staticImages/1')
   ];
 
+  @Output() materialWasSelected = new EventEmitter<Material>();
   constructor() { }
 
   ngOnInit() {
+  }
+  throwUpMaterialSelected(selectedMaterial: Material) {
+    this.materialWasSelected.emit(selectedMaterial);
   }
 
 }

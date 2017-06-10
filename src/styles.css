@@ -1,11 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 body{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: #adb0b2;
-  background: -webkit-linear-gradient(#EFEFEF, #CACACC);
-  background: -o-linear-gradient(#EFEFEF, #CACACC);
-  background: -moz-linear-gradient(#EFEFEF, #CACACC);
-  background: linear-gradient(#EFEFEF, #CACACC);
+  background: #EFEFEF;
+  /*background: #adb0b2;*/
+  /*background: -webkit-linear-gradient(#EFEFEF, #CACACC);*/
+  /*background: -o-linear-gradient(#EFEFEF, #CACACC);*/
+  /*background: -moz-linear-gradient(#EFEFEF, #CACACC);*/
+  /*background: linear-gradient(#EFEFEF, #CACACC);*/
 }
 
 
