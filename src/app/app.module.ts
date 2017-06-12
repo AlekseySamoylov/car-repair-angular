@@ -19,6 +19,8 @@ import { PriceItemComponent } from './prices/price-list/price-item/price-item.co
 import { PriceManagerComponent } from './prices/price-list/price-manager/price-manager.component';
 import { AboutComponent } from './about/about.component';
 import { CarRepairComponent } from './car-repair/car-repair.component';
+import {BasicHighlightDirective} from './custom-directives/basic-highlight.directive';
+import { BetterHighlightDirective } from './custom-directives/better-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { CarRepairComponent } from './car-repair/car-repair.component';
     PriceItemComponent,
     PriceManagerComponent,
     AboutComponent,
-    CarRepairComponent
+    CarRepairComponent,
+    BasicHighlightDirective,
+    BetterHighlightDirective
   ],
   imports: [
     BrowserModule,
