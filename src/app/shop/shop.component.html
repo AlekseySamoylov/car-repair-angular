@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-5">
     <app-shop-list
-    (materialWasSelected)="selectMaterial($event)">
+      (materialWasSelected)="selectMaterial($event)">
     </app-shop-list>
   </div>
   <div class="col-md-7">
@@ -12,6 +12,10 @@
     <ng-template #infoText>
       <p appBasicHighlight>Please select a Price item.</p>
       <p appBetterHighlight>Please select a Price item.</p>
+      <p appBetterHighlight [highlightColor]="'pink'" [defaultColor]="'yellow'">Please select a Price item.</p>
     </ng-template>
+    <div *appUnless="selectedMaterial">
+      <p>Please select a Price item. Unless</p>
+    </div>
   </div>
 </div>

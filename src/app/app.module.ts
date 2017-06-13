@@ -21,6 +21,7 @@ import { AboutComponent } from './about/about.component';
 import { CarRepairComponent } from './car-repair/car-repair.component';
 import {BasicHighlightDirective} from './custom-directives/basic-highlight.directive';
 import { BetterHighlightDirective } from './custom-directives/better-highlight.directive';
+import { UnlessDirective } from './custom-directives/unless.directive';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { BetterHighlightDirective } from './custom-directives/better-highlight.d
     AboutComponent,
     CarRepairComponent,
     BasicHighlightDirective,
-    BetterHighlightDirective
+    BetterHighlightDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
