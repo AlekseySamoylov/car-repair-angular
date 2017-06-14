@@ -22,6 +22,7 @@ import { CarRepairComponent } from './car-repair/car-repair.component';
 import {BasicHighlightDirective} from './custom-directives/basic-highlight.directive';
 import { BetterHighlightDirective } from './custom-directives/better-highlight.directive';
 import { UnlessDirective } from './custom-directives/unless.directive';
+import {DropdownDirective} from './custom-directives/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { UnlessDirective } from './custom-directives/unless.directive';
     CarRepairComponent,
     BasicHighlightDirective,
     BetterHighlightDirective,
-    UnlessDirective
+    UnlessDirective,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,

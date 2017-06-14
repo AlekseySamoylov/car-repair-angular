@@ -8,4 +8,10 @@ export class Material {
     this.description = description;
     this.imagePath = imagePath;
   }
+
+
+  public toString = () : string => {
+    return `Material name (${this.title})`;
+  }
+
 }
