@@ -40,5 +40,8 @@ export class HeaderComponent {
   openBasketMenu() {
     this.menuTabSelected.emit(HeaderTab.BASKET);
   }
+  openAdminMenu() {
+    this.menuTabSelected.emit(HeaderTab.ADMIN_PANEL);
+  }
 
 }

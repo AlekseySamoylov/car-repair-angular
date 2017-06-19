@@ -60,6 +60,10 @@
               <a href="#" (click)="headerSelect(6); openBasketMenu()">Покупки</a>
             </li>
 
+            <li [ngClass]="{'active': isHeaderTabSelected(7)}">
+              <a href="#" (click)="headerSelect(7); openAdminMenu()">Админ-панель</a>
+            </li>
+
           </ul>
         </div>
       </div>

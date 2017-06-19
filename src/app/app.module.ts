@@ -23,10 +23,14 @@ import {BasicHighlightDirective} from './custom-directives/basic-highlight.direc
 import { BetterHighlightDirective } from './custom-directives/better-highlight.directive';
 import { UnlessDirective } from './custom-directives/unless.directive';
 import {DropdownDirective} from './custom-directives/dropdown.directive';
+import { AccountComponent } from './admin-panel/account/account.component';
+import { NewAccountComponent } from './admin-panel/new-account/new-account.component';
+import {AdminPanelComponent} from './admin-panel/admin-panel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AdminPanelComponent,
     HeaderComponent,
     PricesComponent,
     ContactsComponent,
@@ -45,7 +49,9 @@ import {DropdownDirective} from './custom-directives/dropdown.directive';
     BasicHighlightDirective,
     BetterHighlightDirective,
     UnlessDirective,
-    DropdownDirective
+    DropdownDirective,
+    AccountComponent,
+    NewAccountComponent
   ],
   imports: [
     BrowserModule,

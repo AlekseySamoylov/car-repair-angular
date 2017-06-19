@@ -4,5 +4,6 @@ export enum HeaderTab {
   CAR_REPAIR,
   SHOP,
   CONTACTS,
-  BASKET
+  BASKET,
+  ADMIN_PANEL
 }
