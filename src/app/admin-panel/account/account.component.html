@@ -3,9 +3,9 @@
     <h5>{{ account.username }}</h5>
     <hr>
     <p>This account is {{ account.role }}</p>
-    <button class="btn btn-default" (click)="onSetTo('active')">Set to 'active'</button>
-    <button class="btn btn-default" (click)="onSetTo('inactive')">Set to 'inactive'</button>
-    <button class="btn btn-default" (click)="onSetTo('unknown')">Set to 'unknown'</button>
+    <button class="btn btn-default" (click)="onSetTo(Role.USER)">Set to 'user'</button>
+    <button class="btn btn-default" (click)="onSetTo(Role.MANAGER)">Set to 'manager'</button>
+    <button class="btn btn-default" (click)="onSetTo(Role.ADMIN)">Set to 'admin'</button>
   </div>
 </div>
 

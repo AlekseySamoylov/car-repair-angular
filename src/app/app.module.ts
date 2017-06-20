@@ -26,6 +26,7 @@ import {DropdownDirective} from './custom-directives/dropdown.directive';
 import { AccountComponent } from './admin-panel/account/account.component';
 import { NewAccountComponent } from './admin-panel/new-account/new-account.component';
 import {AdminPanelComponent} from './admin-panel/admin-panel.component';
+import {LoggingService} from './utils/logging.service';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,7 @@ import {AdminPanelComponent} from './admin-panel/admin-panel.component';
     HttpModule,
     JsonpModule
   ],
-  providers: [],
+  providers: [LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

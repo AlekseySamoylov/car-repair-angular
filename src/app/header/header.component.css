@@ -51,14 +51,14 @@ body{
 }
 
 .nav-pills > li > a:hover {
-  background: whitesmoke;
+  background: lightgray;
   border-radius: 5px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .nav-pills > li {
   margin: 3px 5px 3px 5px;
-  background-color: lightgray;
+  background-color: whitesmoke;
   border-radius: 5px;
   box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
 }
@@ -200,7 +200,7 @@ body{
 }
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
   color: #000000;
-  background: whitesmoke;
+  background: lightgray;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   border-radius: 5px;
 
