@@ -8,15 +8,15 @@
         #accountName>
     </div>
     <div class="form-group">
-      <select class="form-control" #status>
-        <option value="active">Active</option>
-        <option value="inactive">Inactive</option>
-        <option value="hidden">Hidden</option>
+      <select class="form-control" #accountRole>
+        <option value="{{ user }}">User</option>
+        <option value="{{ manager }}">Manager</option>
+        <option value="{{ admin }}">Admin</option>
       </select>
     </div>
     <button
       class="btn btn-primary"
-      (click)="onCreateAccount(accountName.value, status.value)">
+      (click)="onCreateAccount(accountName.value, accountRole.value)">
       Add Account
     </button>
   </div>

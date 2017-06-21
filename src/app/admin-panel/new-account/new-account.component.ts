@@ -10,14 +10,21 @@ import {Role} from '../role.enum';
   providers: []
 })
 export class NewAccountComponent implements OnInit {
-  private iterator = 3;
-  constructor(private accountService: AccountService) { }
-
-  ngOnInit() {
+  private iterator: number;
+  user = Role.USER;
+  manager = Role.MANAGER;
+  admin = Role.ADMIN;
+  constructor(private accountService: AccountService) {
+    this.accountService.roleUpdated.subscribe(
+      (role: Role) => alert('New Role: ' + role)
+    );
   }
 
-  onCreateAccount(accountName: string, accountStatus: string) {
-    console.log('Hello ' + accountName);
-    this.accountService.addOne(new Account(this.iterator++, accountName, Role.USER));
+  ngOnInit() {
+    this.iterator = this.accountService.getNewId();
+  }
+
+  onCreateAccount(accountName: string, accountRole: Role) {
+    this.accountService.addOne(new Account(this.iterator, accountName, accountRole));
   }
 }

@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Account} from '../account.model';
 import {AccountService} from '../account.service';
-import {Role} from "../role.enum";
+import {Role} from '../role.enum';
 import {LoggingService} from '../../utils/logging.service';
 
 @Component({
@@ -14,15 +14,32 @@ export class AccountComponent implements OnInit {
 
   @Input() account: Account;
   @Input() id: number;
-  public Role: Role;
+  user = Role.USER;
+  manager = Role.MANAGER;
+  admin = Role.ADMIN;
 
-  constructor(private accountService: AccountService, private LOGGER: LoggingService) { }
+  constructor(private accountService: AccountService) { }
 
   ngOnInit() {
   }
 
-  setTo(role: Role) {
-    this.LOGGER.debug('Role ' + role);
+  onSetTo(role: Role) {
+    this.accountService.updateRole(this.account.id, role);
+    this.accountService.roleUpdated.emit(role);
+
+  }
+
+  onRoleName() {
+    switch (this.account.role) {
+      case Role.USER:
+        return 'User';
+      case Role.MANAGER:
+        return 'Manager';
+      case Role.ADMIN:
+        return 'Admin';
+      default:
+        return 'Unexpected Role';
+    }
   }
 
 }
