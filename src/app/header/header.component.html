@@ -35,33 +35,35 @@
 
         </div>
         <div id="navbarCollapse" class="collapse navbar-collapse navbar-right">
-          <ul class="nav nav-pills">
-            <li [ngClass]="{'active': isHeaderTabSelected(1)}">
-              <a href="#" (click)="headerSelect(1); openMainMenu()">Главная</a>
+          <ul class="nav nav-pills" (click)="headerSelect()">
+            <li
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact: true}">
+              <a routerLink="/">Главная</a>
             </li>
 
-            <li [ngClass]="{'active': isHeaderTabSelected(2)}">
-              <a href="#" (click)="headerSelect(2); openPriceMenu()">Цены</a>
+            <li routerLinkActive="active">
+              <a [routerLink]="'/prices'">Цены</a>
             </li>
 
-            <li [ngClass]="{'active': isHeaderTabSelected(3)}">
-              <a href="#" (click)="headerSelect(3); openCarRepairMenu()">Авторемонт</a>
+            <li routerLinkActive="active">
+              <a routerLink="/car-repair">Авторемонт</a>
             </li>
 
-            <li [ngClass]="{'active': isHeaderTabSelected(4)}">
-              <a href="#" (click)="headerSelect(4); openShopMenu()">Магазин</a>
+            <li routerLinkActive="active">
+              <a routerLink="/shop">Магазин</a>
             </li>
 
-            <li [ngClass]="{'active': isHeaderTabSelected(5)}">
-              <a href="#" (click)="headerSelect(5); openContactsMenu()">Контакты</a>
+            <li routerLinkActive="active">
+              <a routerLink="/contacts">Контакты</a>
             </li>
 
-            <li [ngClass]="{'active': isHeaderTabSelected(6)}">
-              <a href="#" (click)="headerSelect(6); openBasketMenu()">Покупки</a>
+            <li routerLinkActive="active">
+              <a routerLink="/basket">Покупки</a>
             </li>
 
-            <li [ngClass]="{'active': isHeaderTabSelected(7)}">
-              <a href="#" (click)="headerSelect(7); openAdminMenu()">Админ-панель</a>
+            <li routerLinkActive="active">
+              <a routerLink="/admin-panel">Админ-панель</a>
             </li>
 
           </ul>
