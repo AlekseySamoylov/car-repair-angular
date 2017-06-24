@@ -19,7 +19,7 @@ export class BasketEditComponent implements OnInit {
 
   onAddMaterial() {
     console.log('Hello ' + this.amountInputRef);
-    const material = new Material(
+    const material = new Material(16,
       this.nameInputRef.nativeElement.textContent,
       'test description',
       'http://www.alekseysamoylov.com/serviceiii/files/staticImages/1'

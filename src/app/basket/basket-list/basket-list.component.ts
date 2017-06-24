@@ -10,11 +10,11 @@ import { Material } from '../../shared/material.model';
 export class BasketListComponent implements OnInit {
   shoppingBasketItems: ShoppingBasketItem[] = [
     new ShoppingBasketItem(
-      new Material('Brake pads', 'Good part for Toyota', 'http://www.alekseysamoylov.com/serviceiii/files/staticImages/3'),
+      new Material(12, 'Brake pads', 'Good part for Toyota', 'http://www.alekseysamoylov.com/serviceiii/files/staticImages/3'),
       2
     ),
     new ShoppingBasketItem(
-      new Material('GRM belt', 'Good part for Toyota', 'http://www.alekseysamoylov.com/serviceiii/files/staticImages/1'),
+      new Material(13, 'GRM belt', 'Good part for Toyota', 'http://www.alekseysamoylov.com/serviceiii/files/staticImages/1'),
       3
     )
   ];

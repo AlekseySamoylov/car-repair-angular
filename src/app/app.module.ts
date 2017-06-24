@@ -34,6 +34,7 @@ const appRoutes: Routes = [
   { path: 'prices', component: PricesComponent },
   { path: 'car-repair', component: CarRepairComponent },
   { path: 'shop', component: ShopComponent },
+  { path: 'shop/:id', component: ShopComponent },
   { path: 'basket', component: BasketComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: 'admin-panel', component: AdminPanelComponent }

@@ -1,5 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Material} from '../../shared/material.model';
+import {ActivatedRoute} from '@angular/router';
+import {ShopService} from '../shop.service';
 
 @Component({
   selector: 'app-shop-detail',

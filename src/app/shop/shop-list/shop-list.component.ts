@@ -1,5 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { Material } from '../../shared/material.model';
+import {ShopService} from '../shop.service';
 
 @Component({
   selector: 'app-shop-list',
@@ -7,20 +8,13 @@ import { Material } from '../../shared/material.model';
   styleUrls: ['./shop-list.component.css']
 })
 export class ShopListComponent implements OnInit {
-  materialList: Material[] = [
-    new Material('Brake pads', 'Good part for Toyota', 'http://www.alekseysamoylov.com/serviceiii/files/staticImages/3'),
-    new Material('GRM belt', 'Good part for Toyota', 'http://www.alekseysamoylov.com/serviceiii/files/staticImages/1'),
-    new Material('Water pump', 'Good part for Toyota', 'http://www.alekseysamoylov.com/serviceiii/files/staticImages/1'),
-    new Material('Brake pads', 'Good part for Toyota', 'http://ecx.images-amazon.com/images/I/517-mcfN+rL._AC_US160_.jpg'),
-    new Material('Brake pads', 'Good part for Toyota', 'http://www.alekseysamoylov.com/serviceiii/files/staticImages/2'),
-    new Material('GRM belt', 'Good part for Toyota', 'http://www.alekseysamoylov.com/serviceiii/files/staticImages/1'),
-    new Material('Water pump', 'Good part for Toyota', 'http://www.alekseysamoylov.com/serviceiii/files/staticImages/1')
-  ];
+  materialList: Material[] = [];
 
   @Output() materialWasSelected = new EventEmitter<Material>();
-  constructor() { }
+  constructor(private shopService: ShopService) { }
 
   ngOnInit() {
+    this.materialList = this.shopService.getAll();
   }
   throwUpMaterialSelected(selectedMaterial: Material) {
     this.materialWasSelected.emit(selectedMaterial);
