@@ -28,6 +28,7 @@ import { AccountComponent } from './admin-panel/account/account.component';
 import { NewAccountComponent } from './admin-panel/new-account/new-account.component';
 import {AdminPanelComponent} from './admin-panel/admin-panel.component';
 import {LoggingService} from './utils/logging.service';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
   { path: '', component: AboutComponent },
@@ -37,7 +38,9 @@ const appRoutes: Routes = [
   { path: 'shop/:id', component: ShopComponent },
   { path: 'basket', component: BasketComponent },
   { path: 'contacts', component: ContactsComponent },
-  { path: 'admin-panel', component: AdminPanelComponent }
+  { path: 'admin-panel', component: AdminPanelComponent },
+  { path: 'not-found', component: PageNotFoundComponent },
+  { path: '**', redirectTo: '/not-found' }
 ];
 
 @NgModule({
@@ -64,7 +67,8 @@ const appRoutes: Routes = [
     UnlessDirective,
     DropdownDirective,
     AccountComponent,
-    NewAccountComponent
+    NewAccountComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
