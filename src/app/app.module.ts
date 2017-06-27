@@ -29,19 +29,9 @@ import { NewAccountComponent } from './admin-panel/new-account/new-account.compo
 import {AdminPanelComponent} from './admin-panel/admin-panel.component';
 import {LoggingService} from './utils/logging.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
-const appRoutes: Routes = [
-  { path: '', component: AboutComponent },
-  { path: 'prices', component: PricesComponent },
-  { path: 'car-repair', component: CarRepairComponent },
-  { path: 'shop', component: ShopComponent },
-  { path: 'shop/:id', component: ShopComponent },
-  { path: 'basket', component: BasketComponent },
-  { path: 'contacts', component: ContactsComponent },
-  { path: 'admin-panel', component: AdminPanelComponent },
-  { path: 'not-found', component: PageNotFoundComponent },
-  { path: '**', redirectTo: '/not-found' }
-];
+import {AppRoutingModule} from "./app-routing.module";
+import {AuthService} from "./auth.service";
+import {AuthGuard} from "./auth-guard.service";
 
 @NgModule({
   declarations: [
@@ -75,9 +65,9 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     JsonpModule,
-    RouterModule.forRoot(appRoutes)
+    AppRoutingModule
   ],
-  providers: [LoggingService],
+  providers: [LoggingService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
