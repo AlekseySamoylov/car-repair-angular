@@ -20,7 +20,10 @@ const appRoutes: Routes = [
   { path: 'shop/:id', component: ShopComponent },
   { path: 'basket', component: BasketComponent },
   { path: 'contacts', component: ContactsComponent },
-  { path: 'admin-panel', canActivate: [AuthGuard], component: AdminPanelComponent },
+  { path: 'admin-panel',
+    canActivate: [AuthGuard],
+    canActivateChild: [AuthGuard],
+    component: AdminPanelComponent },
   { path: 'not-found', component: PageNotFoundComponent },
   { path: '**', redirectTo: '/not-found' }
 ];
