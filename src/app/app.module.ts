@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -29,9 +29,10 @@ import { NewAccountComponent } from './admin-panel/new-account/new-account.compo
 import {AdminPanelComponent} from './admin-panel/admin-panel.component';
 import {LoggingService} from './utils/logging.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import {AppRoutingModule} from "./app-routing.module";
-import {AuthService} from "./auth.service";
-import {AuthGuard} from "./auth-guard.service";
+import {AppRoutingModule} from './app-routing.module';
+import {AuthService} from './auth.service';
+import {AuthGuard} from './auth-guard.service';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -58,11 +59,13 @@ import {AuthGuard} from "./auth-guard.service";
     DropdownDirective,
     AccountComponent,
     NewAccountComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     JsonpModule,
     AppRoutingModule
