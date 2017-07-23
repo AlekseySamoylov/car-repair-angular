@@ -33,6 +33,9 @@ import {AppRoutingModule} from './app-routing.module';
 import {AuthService} from './auth.service';
 import {AuthGuard} from './auth-guard.service';
 import { RegistrationComponent } from './registration/registration.component';
+import { WorkstationComponent } from './workstation/workstation.component';
+import { ServicePanelComponent } from './workstation/service-panel/service-panel.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +63,10 @@ import { RegistrationComponent } from './registration/registration.component';
     AccountComponent,
     NewAccountComponent,
     PageNotFoundComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    WorkstationComponent,
+    ServicePanelComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

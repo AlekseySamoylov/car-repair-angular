@@ -1,1 +1,31 @@
-<app-price-list></app-price-list>
+<app-price-list *ngIf="admin"></app-price-list>
+<h1>Цены&nbsp;на услуги автосервиса</h1>
+<p>В этом разделе Вы можете ознакомиться с ценами на наиболее распространенные виды работ.</p>
+<p>Стоимость по каждой конкретной работе может отличаться от указанной на сайте, в зависимости от модели автомобиля и от
+  комплектации.</p>
+<p>Более полную информацию уточняйте у менеджеров по телефону <br> +7 (342) 234-32-33</p>
+
+<div class="row">
+  <div class="col-xs-12">
+    <table class="table table-striped"
+           *ngFor="let filledWorkGroup of works">
+      <thead class="table-head">
+      <tr>
+        <th colspan="3" class="text-center"><strong>{{filledWorkGroup.title}}</strong></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td class="text-center">Название</td>
+        <td class="text-center">Описание</td>
+        <td class="text-center">Цена</td>
+      </tr>
+      <tr *ngFor="let work of filledWorkGroup.works">
+        <td class="text-center" >{{work.title}}</td>
+        <td class="text-center">{{work.details}}</td>
+        <td class="text-center">от {{work.price}}₽</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

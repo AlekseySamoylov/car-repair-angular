@@ -12,6 +12,8 @@ import {AboutComponent} from './about/about.component';
 import {BasketComponent} from './basket/basket.component';
 import {AuthGuard} from './auth-guard.service';
 import {RegistrationComponent} from './registration/registration.component';
+import {WorkstationComponent} from './workstation/workstation.component';
+import {ServicePanelComponent} from './workstation/service-panel/service-panel.component';
 
 const appRoutes: Routes = [
   { path: '', component: AboutComponent },
@@ -22,6 +24,8 @@ const appRoutes: Routes = [
   { path: 'basket', component: BasketComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: 'registration', component: RegistrationComponent },
+  { path: 'workstation', component: WorkstationComponent },
+  { path: 'workstation/service-panel', component: ServicePanelComponent },
   { path: 'admin-panel',
     canActivate: [AuthGuard],
     canActivateChild: [AuthGuard],
